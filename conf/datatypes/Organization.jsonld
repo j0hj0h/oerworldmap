@@ -1,9 +1,16 @@
 {
   "@context": {
-    "legalName": "http://schema.org/legalName",
-    "Place" : "http://schema.org/Place",
+    "legalName" : "http://schema.org/legalName",
+    "place" : "http://schema.org/Place",
     "email" : "http://schema.org/email",
     "website" : "http://schema.org/url",
-    "Agent" : "file://./conf/datatypes/Agent.jsonld"
+    "agents" : { 
+    	"items" : {
+    		"$ref" : [
+    			"file://./conf/datatypes/Organization.jsonld",
+    			"file://./conf/datatypes/Person.jsonld"
+    		]
+    	}
+    }
   }
 }

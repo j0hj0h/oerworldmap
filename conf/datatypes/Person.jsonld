@@ -1,8 +1,7 @@
 {
   "@context": {
-    "givenName": "http://schema.org/givenName",
-    "familyName": "http://schema.org/familyName",
-    "email" : "http://schema.org/email",
-    "Agent" : "file://./conf/datatypes/Agent.jsonld"
+    "givenName" : "http://schema.org/givenName",
+    "familyName" : "http://schema.org/familyName",
+    "email" : "http://schema.org/email"
   }
 }
