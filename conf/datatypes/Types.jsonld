@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "FileRoot" : "file://./conf/datatypes/",
+    "FileExtension" : ".jsonld",
+    "Person": "Person",
+    "Organization": "Organization"
+  }
+}

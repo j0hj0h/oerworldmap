@@ -1,3 +1,4 @@
+
 .settings/
 project/project
 project/target
@@ -5,7 +6,11 @@ target
 logs
 .classpath
 .project
+<<<<<<< HEAD
 data/*/
 !data/resources/
 repo-deb-build*.*
 .idea/
+conf/application.conf
+data
+repo-deb-build*.*
