@@ -1,0 +1,17 @@
+{
+  "@context" : {
+    "name:" : "http://schema.org/Text",
+    "abstract:" : "http://schema.org/description",
+    "organizer" : "http://schema.org/organizer",
+    "attendees" : { 
+    	"items" : {
+    		"$ref" : "http://schema.org/attendee"
+    	}
+    },
+    "location" : "http://schema.org/location",
+    "start" : "http://schema.org/startDate",
+    "duration" : "http://schema.org/duration",
+    "speakers" : "http://schema.org/performer",
+    "website" : "http://schema.org/url"
+  }
+}
