@@ -1,0 +1,14 @@
+{
+  "@context" : {
+    "@type" : "http://schema.org/Service",
+    "name:" : "http://schema.org/Text",
+    "abstract:" : "http://schema.org/description",
+    "provider" : "http://schema.org/provider",
+    "users" : { 
+    	"items" : {
+    		"$ref" : "http://schema.org/Person"
+    	}
+    },
+    "website" : "http://schema.org/url"
+  }
+}

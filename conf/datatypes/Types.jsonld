@@ -3,7 +3,11 @@
     "fileRoot" : "file://./conf/datatypes/",
     "fileExtension" : ".jsonld",
     "event": "Event",
+    "oercommunity": "OerCommunity",
     "organization": "Organization",
-    "person": "Person"
+    "person": "Person",
+    "policy": "Policy",
+    "service": "Service",
+    "tool": "Tool"
   }
 }

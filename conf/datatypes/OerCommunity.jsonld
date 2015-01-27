@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "name" : "http://schema.org/Text",
+    "abstract:" : "http://schema.org/description",
+    "website" : "http://schema.org/url",
+    "members" : { 
+    	"items" : {
+    		"$ref" : [
+    			"file://./conf/datatypes/Organization.jsonld",
+    			"file://./conf/datatypes/Person.jsonld"
+    		]
+    	}
+    },
+    "admins" : { 
+    	"items" : {
+    		"$ref" : [
+    			"file://./conf/datatypes/Organization.jsonld",
+    			"file://./conf/datatypes/Person.jsonld"
+    		]
+    	}
+    },
+    "events" : { 
+    	"items" : {
+    		"$ref" : [
+    			"file://./conf/datatypes/Event.jsonld"
+    		]
+    	}
+    }
+  }
+}

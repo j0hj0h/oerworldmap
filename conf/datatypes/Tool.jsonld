@@ -1,0 +1,8 @@
+{
+  "@context" : {
+    "@type" : "http://schema.org/Product",
+    "name:" : "http://schema.org/Text",
+    "manufacturer" : "http://schema.org/Organization",
+    "website" : "http://schema.org/url"
+  }
+}

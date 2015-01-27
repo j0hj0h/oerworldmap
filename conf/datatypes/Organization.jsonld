@@ -11,6 +11,11 @@
     			"file://./conf/datatypes/Person.jsonld"
     		]
     	}
+    },
+    "tools" : { 
+    	"items" : {
+    		"$ref" : "file://./conf/datatypes/Tool.jsonld"
+    	}
     }
   }
 }
