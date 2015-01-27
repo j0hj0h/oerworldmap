@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "legalName": "http://schema.org/legalName",
+    "Place" : "http://schema.org/Place",
+    "email" : "http://schema.org/email",
+    "website" : "http://schema.org/url",
+    "Agent" : "file://./conf/datatypes/Agent.jsonld"
+  }
+}
