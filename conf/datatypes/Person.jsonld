@@ -2,9 +2,7 @@
   "@context": {
     "email" : "http://schema.org/email",
     "address" : {
-      "adressCountry" : {
-        "description" : "http://schema.org/Text"
-      }
+      "adressCountry" : "http://schema.org/Text"
     }
   }
 }
