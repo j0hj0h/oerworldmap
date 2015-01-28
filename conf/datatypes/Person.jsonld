@@ -1,7 +1,10 @@
 {
   "@context": {
-    "givenName" : "http://schema.org/givenName",
-    "familyName" : "http://schema.org/familyName",
-    "email" : "http://schema.org/email"
+    "email" : "http://schema.org/email",
+    "address" : {
+      "adressCountry" : {
+        "description" : "http://schema.org/Text"
+      }
+    }
   }
 }
