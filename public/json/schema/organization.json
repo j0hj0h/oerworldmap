@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema#",
+  "id": "http://www.oerworldmap.com/json/schema/organization.json#",
+  "title": "Organization",
+  "description": "An institution serving or working with Open Educational Resources.",
+  "type": "object",
+  "properties": {
+    "@id": {
+      "description": "The organization's unique identifier",
+      "type": ["string", "null"]
+    },
+    "abstract": {
+      "description": "A one-liner describing the organization's activities",
+      "type": ["string", "null"]
+    },
+    "address" : {
+      "description": "The organization's postal address",
+      "type": ["string", "null"]
+    },
+    "description": {
+      "description": "An extended description of the organization's activities",
+      "type": ["string", "null"]
+    },
+    "email" : {
+      "description": "The organization's email contact",
+      "type": ["string", "null"]
+    },
+	"fax" : {
+      "description": "The organization's fax number",
+      "type": ["string", "null"]
+    },
+	"name": {
+      "description": "The organization's primary name, e.g. a legally recognized name",
+      "type": ["string", "null"]
+    },
+    "telephone" : {
+      "description": "The organization's phone number",
+      "type": ["string", "null"]
+    }
+  }
+}

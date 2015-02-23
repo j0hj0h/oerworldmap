@@ -1,0 +1,16 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "abstract" : "Das hbz ist eine zentrale Dienstleistungs- und Entwicklungseinrichtung für Bibliotheken in NRW.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cologne, Germany",
+    "postalCode": "D-50931",
+    "streetAddress": "Jülicher Straße 6"
+  },
+  "description" : "Das Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen (hbz) steht im Bereich des Bibliotheks- und Informationswesens für Wissen, Information und Innovation. Es ist eine zentrale Dienstleistungs- und Entwicklungseinrichtung für Bibliotheken und blickt auf 40 Jahre Erfahrung zurück. Somit erweist sich das hbz als verlässlicher Partner für Bibliotheken und Entwickler innovativer Formen der Informationsvermittlung.",
+  "email": "info-hbz(at)hbz-nrw.de",
+  "fax": "+49 (0)221 / 400 75 - 180",
+  "name": "Hochschulbibliothekszentrum des Landes Nordrhein-Westfalen (hbz)",
+  "telephone": "+49 (0)221 / 400 75 - 0" 
+}
