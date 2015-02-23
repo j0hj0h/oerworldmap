@@ -6,7 +6,6 @@ target
 logs
 .classpath
 .project
-<<<<<<< HEAD
 data/*/
 !data/resources/
 repo-deb-build*.*
