@@ -1,8 +1,5 @@
 {
   "@context": {
-    "email" : "http://schema.org/email",
-    "address" : {
-      "adressCountry" : "http://schema.org/Text"
-    }
+    "email" : "http://schema.org/email"
   }
 }

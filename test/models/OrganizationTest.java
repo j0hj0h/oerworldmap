@@ -1,29 +1,35 @@
 package models;
 
+import helpers.JsonHelpers;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.github.fge.jsonschema.core.report.ProcessingReport;
+
 public class OrganizationTest {
 
-  private static final String mSampleOrganization = "{"+////
-    "\"@context\": \"http://schema.org/\","+//
-    "\"@id\": \"urn:uuid:f106f854-3472-4a0d-b807-0eada76bbc4e\","+//
-    "\"@type\": \"Organization\","+//
-    "\"name\": \"Hochschulbibliothekszentrum des Landes NRW\","+//
-    "\"location\": {"+//
-        "\"@type\": \"Place\","+//
-        "\"address\": {"+//
-          "\"@type\": \"PostalAddress\","+//
-          "\"addressCountry\": \"de\","+//
-          "\"addressLocality\": \"Cologne\","+//
-          "\"streetAddress\": \"Jülicher Straße 6\","+//
-          "\"postalCode\": \"50674\""+//
-        "},"+//
-        "\"geo\": {"+//
-          "\"@type\": \"GeoCoordinates\","+//
-          "\"latitude\": \"50.9341361\","+//
-          "\"longitude\": \"6.93551400842729\""+//
-        "}"+//
-      "}" + //
-    "}";
-  
-  
+  private static final String mSchemaPath = "conf/datatypes/Organization.jsonld";
+  private static final String mDataPath = "conf/sampleData/OrganizationSample.json";
 
+  @Test
+  public void validateAgainstSchema() {
+    try {
+      final String schema = new String(Files.readAllBytes(Paths.get(mSchemaPath)),
+          StandardCharsets.UTF_8);
+      final String data = new String(Files.readAllBytes(Paths.get(mDataPath)),
+          StandardCharsets.UTF_8);
+      ProcessingReport report = JsonHelpers.validate(data, schema);
+      Assert.assertTrue(report.isSuccess());
+    } catch (IOException e) {
+      e.printStackTrace();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
 }
