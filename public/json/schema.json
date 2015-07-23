@@ -290,6 +290,9 @@
             },
             "location": {
               "$ref": "#/definitions/Place"
+            },
+            "authorOf": {
+              "$ref": "#/definitions/Article"
             }
           }
         },

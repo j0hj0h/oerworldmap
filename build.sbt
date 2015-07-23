@@ -15,7 +15,8 @@ libraryDependencies ++= Seq(
   "org.apache.commons" % "commons-io" % "1.3.2",
   "org.elasticsearch" % "elasticsearch" % "1.3.6",
   "org.json" % "json" % "20141113",
-  "com.github.spullara.mustache.java" % "compiler" % "0.9.0"
+  "com.github.spullara.mustache.java" % "compiler" % "0.9.0",
+  "uk.com.robust-it" % "cloning" % "1.9.2"
 )
 
 includeFilter in (Assets, LessKeys.less) := "main.less"
