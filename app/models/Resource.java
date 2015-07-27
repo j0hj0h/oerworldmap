@@ -129,13 +129,15 @@ public class Resource extends HashMap<String, Object> {
     }
   }
 
-  public static Resource reducedToId(Resource aResource) {
+  public static Resource getLinkView(Resource aResource) {
     Resource result = new Resource();
     result.put(JsonLdConstants.ID, aResource.get(JsonLdConstants.ID));
+    result.put(JsonLdConstants.TYPE, aResource.get(JsonLdConstants.TYPE));
+    result.put("name", aResource.get("name"));
     return result;
   }
 
-  public static Resource strippedFromIdObjects(Resource aResource) {
+  public static Resource getEmbedView(Resource aResource) {
     Resource result = new Cloner().deepClone(aResource);
     for (Iterator<Map.Entry<String, Object>> it = result.entrySet().iterator(); it.hasNext();) {
       Map.Entry<String, Object> entry = it.next();
@@ -155,7 +157,7 @@ public class Resource extends HashMap<String, Object> {
           it.remove();
         }
         else{
-          entry.setValue(strippedFromIdObjects(innerResource));
+          entry.setValue(getEmbedView(innerResource));
         }
       }
     }

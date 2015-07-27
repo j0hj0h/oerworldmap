@@ -25,8 +25,12 @@ public class ResourceAddInformationTest extends ResourceTestBase {
     } catch (IOException e) {
       e.printStackTrace();
     }
-    Assert.assertEquals(person, mRepo.getResource("person00002"));
-    Assert.assertNull(mRepo.getResource("article00001"));
+    try {
+      Assert.assertEquals(person, mRepo.getResource("person00002"));
+      Assert.assertNull(mRepo.getResource("article00001"));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   @SuppressWarnings("unchecked")
@@ -38,7 +42,7 @@ public class ResourceAddInformationTest extends ResourceTestBase {
         .fromJson("{\"@type\":\"Person\",\"@id\":\"person00003\",\"workLocation\":{\"@type\":\"Place\",\"@id\":\"afcad4ac-9c38-44fe-b7c6-489b7a19cc27\",\"address\":{\"@type\":\"PostalAddress\",\"@id\":\"55c95321-b734-4bd8-b41b-5fb58352b03f\",\"addressCountry\":\"FR\"}},\"mbox_sha1sum\":\"encryptedEmailAddressPerson00003\"}");
     final Resource originalArticle = Resource
         .fromJson("{\"@type\":\"Article\",\"@id\":\"article00002\", \"about\":{\"name\":[\"Highly interesting\"], \"articleBody\":[\"...and so on.\"]}}");
-    
+     
     // work data
     Cloner cloner = new Cloner();
     Resource enhancedArticle = cloner.deepClone(originalArticle);
@@ -55,10 +59,10 @@ public class ResourceAddInformationTest extends ResourceTestBase {
     
     // store articles in person vice versa
     final List<Resource> articles = new LinkedList<>();
-    articles.add(Resource.strippedFromIdObjects(enhancedArticle));
+    articles.add(Resource.getEmbedView(enhancedArticle));
     enhancedPerson.put("authorOf", articles);
     try {
-      mRepo.addResource(Resource.strippedFromIdObjects(enhancedPerson));
+      mRepo.addResource(Resource.getEmbedView(enhancedPerson));
       final Resource requestedArticle = mRepo.getResource("article00002");
       Assert.assertEquals(originalPerson, mRepo.getResource("person00003"));
       // since the article stored alongside the person was free from IDed information,
