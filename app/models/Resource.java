@@ -24,10 +24,16 @@ import play.Logger;
 public class Resource extends HashMap<String, Object> {
 
   private static final long serialVersionUID = -6575906632803830609L;
-
+  
   // identified ("primary") data types that get an ID
   private static final List<String> mIdentifiedTypes = new ArrayList<String>(Arrays.asList(
       "Organization", "Event", "Person", "Action", "WebPage", "Article", "Service"));
+
+  private static final Set<ResourceRelation> mRelations = new HashSet<>();
+  static{
+    ResourceRelation relation = new ResourceRelation("author", "authorOf");
+    mRelations.add(relation); mRelations.add(relation.getInversed());
+  }
 
   public static final String REFERENCEKEY = "referencedBy";
 
