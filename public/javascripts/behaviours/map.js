@@ -516,12 +516,14 @@ var Hijax = (function ($, Hijax) {
       });
 
       // OSM tile source
-      osmTileSource = new ol.source.OSM({});
+      osmTileSource = new ol.source.OSM({
+        url: 'https://{a-c}.tiles.mapbox.com/v4/johjoh.oer_worldmap/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoiam9oam9oIiwiYSI6Imd3bnowY3MifQ.fk6HYuu3q5LzDi3dyip0Bw'
+      });
 
       // OSM tile layer
       osmTileLayer = new ol.layer.Tile({
         source: osmTileSource,
-        opacity: 0.5
+        opacity: 1
       });
 
       // Get zoom values adapted to map size
